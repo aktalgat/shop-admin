@@ -2,8 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { MaterialModule } from '@angular/material';
 import { RouterModule, Routes } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MdButtonModule, MdCheckboxModule, MdIconModule, MdSidenavModule, MdCardModule, MdMenuModule, MdInputModule, MdToolbarModule} from '@angular/material';
 import 'hammerjs';
 
 import { AppComponent } from './app.component';
@@ -23,7 +24,8 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
-    MaterialModule,
+    BrowserAnimationsModule,
+    MdButtonModule, MdCheckboxModule, MdIconModule, MdSidenavModule, MdCardModule, MdMenuModule, MdInputModule, MdToolbarModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [AppService],

@@ -1,7 +1,7 @@
 ﻿import { Component } from '@angular/core';
 import { OnInit } from '@angular/core'
 import { AppService } from './app.service'
-import { Router } from '@angular/router'
+import {NavigationStart, Router} from '@angular/router'
 
 @Component({
   selector: 'app-root',
@@ -23,10 +23,20 @@ export class AppComponent implements OnInit {
       this.showMenu = bool;
     });
 
-    this.router.events.subscribe((val) => {
-      if (val.url == '/') {
-        this.appService.setShowMenu(true);
+    this.router.events.subscribe(val => {
+      if (val instanceof NavigationStart) {
+        if (val.url == '/') {
+          this.appService.setShowMenu(true);
+        }
+        if (val.url == '/login') {
+          this.appService.setShowMenu(false);
+        }
       }
+      console.log(val);
+      // NavigationEnd
+      // NavigationCancel
+      // NavigationError
+      // RoutesRecognized
     });
   }
 }

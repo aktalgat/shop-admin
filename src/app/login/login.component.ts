@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { AppService } from '../app.service'
-import { Router } from '@angular/router'
+import { NavigationStart, Router } from '@angular/router'
 import { LoginService } from './login.service'
 
 @Component({
@@ -15,11 +15,7 @@ export class LoginComponent {
   password: String;
 
   constructor (private appService: AppService, private router: Router) {
-    router.events.subscribe((val) => {
-      if (val.url == '/login') {
-        appService.setShowMenu(false);
-      }
-    });
+
   }
 
   logIn() {
