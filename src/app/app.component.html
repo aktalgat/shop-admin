@@ -1,8 +1,14 @@
 <div *ngIf="showMenu">
   <md-toolbar color="primary">
-    <span><md-icon>mood</md-icon></span>
+    <button md-button class="hamburger"><md-icon>menu</md-icon></button>
 
-    <span>Yay, Material in Angular 2!</span>
+    <a>Продукты</a>
+    <a>Мыломойка</a>
+    <span></span>
+
+    <span class="example-fill-remaining-space"></span>
+
+    <button md-raised-button [routerLink]="['/login']" routerLinkActive="active" color="accent">Войти</button>
 
     <button md-icon-button [md-menu-trigger-for]="menu">
       <md-icon>more_vert</md-icon>
@@ -13,17 +19,17 @@
     <button md-menu-item>Option 2</button>
   </md-menu>
 
-  <md-card>
+  <!--<md-card>
     <button md-button>All</button>
     <button md-raised-button>Of</button>
     <button md-raised-button color="primary">The</button>
     <button md-raised-button [routerLink]="['/login']" routerLinkActive="active" color="accent">Buttons</button>
-  </md-card>
+  </md-card>-->
 
-  <span class="done">
+  <!--<span class="done">
     <button md-fab>
       <md-icon>check circle</md-icon>
     </button>
-  </span>
+  </span>-->
 </div>
 <router-outlet></router-outlet>
