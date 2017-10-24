@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatCheckboxModule, MatIconModule, MatSidenavModule, MatCardModule, MatMenuModule, MatInputModule, MatToolbarModule} from '@angular/material';
+import { MaterialModule } from './material.module'
 import 'hammerjs';
 
 import { AppComponent } from './app.component';
@@ -25,7 +25,7 @@ const appRoutes: Routes = [
     FormsModule,
     HttpModule,
     BrowserAnimationsModule,
-    MatButtonModule, MatCheckboxModule, MatIconModule, MatSidenavModule, MatCardModule, MatMenuModule, MatInputModule, MatToolbarModule,
+    MaterialModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [AppService],

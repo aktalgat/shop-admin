@@ -12,7 +12,7 @@ export class AppComponent implements OnInit {
 
   showMenu: boolean;
   hero = 'My hero';
-  title = 'My title';
+  title = 'Shop';
 
   constructor(private appService: AppService, private router: Router) {
     this.showMenu = true;
