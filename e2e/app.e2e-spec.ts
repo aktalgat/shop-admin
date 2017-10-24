@@ -1,14 +1,14 @@
-import { AppPage } from './app.po';
+import { ShopPage } from './app.po';
 
 describe('temp App', () => {
-  let page: AppPage;
+  let page: ShopPage;
 
   beforeEach(() => {
-    page = new AppPage();
+    page = new ShopPage();
   });
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!');
+    expect(page.getParagraphText()).toEqual('Продукты');
   });
 });
