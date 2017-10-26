@@ -2,16 +2,16 @@
   <mat-toolbar color="primary">
     <button mat-button class="hamburger"><mat-icon>menu</mat-icon></button>
 
-    <a>Продукты</a>
-    <a>Мыломойка</a>
+    <a i18n>Products</a>&nbsp;
+    <a i18n>Washing</a>
     <span></span>
 
     <span class="example-fill-remaining-space"></span>
 
-    <span class="flag-icon flag-icon-kg"></span>
-    <span class="flag-icon flag-icon-ru"></span>
-    <span class="flag-icon flag-icon-gb-eng"></span>
-    <button mat-raised-button [routerLink]="['/login']" routerLinkActive="active" color="accent">Войти</button>
+    <span class="">ru</span>&nbsp;
+    <span class="">kg</span>&nbsp;
+    <span class="">en</span>
+    <button mat-raised-button [routerLink]="['/login']" routerLinkActive="active" color="accent" i18n>Enter</button>
 
     <button mat-icon-button [mat-menu-trigger-for]="menu">
       <mat-icon>more_vert</mat-icon>
