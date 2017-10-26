@@ -9,6 +9,6 @@ describe('temp App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Продукты');
+    expect(page.getParagraphText()).toEqual('Products');
   });
 });
